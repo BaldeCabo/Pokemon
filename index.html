@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- js file link -->
+    <script src="jscript1.js" defer></script>
+ 
+
+</head>
+<body>
+
+    <button class="baton" onclick="playAudio()">
+        <p>Click Anywhere</p>
+    </button>
+
+    <button class="stop" onclick="stopAudio()">
+        <img src="https://icones.pro/wp-content/uploads/2022/02/icone-du-son-et-du-haut-parleur-orange.png" alt="" draggable="false">
+    </button>
+    <img class="stopped" src="https://clipart-library.com/image_gallery/583742.png" alt="" draggable="false">
+
+    <div class="audioContainer">
+        <audio id="myAudio" controls loop>
+          <source src="audio.mp3" type="audio/mp3">
+        </audio>
+      </div>
+
+<div class="container">
+    <h3 class="title">POKEMON</h3>
+    <div class="pokemon-container">
+
+        <div class="pokemon" data-name="p-1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" draggable="false">
+            <h3>Bulbasaur</h3>
+            <div class="type">
+                <p style="color:white;background-color:green;">Grass</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div>
+<!-- 
+        <div class="pokemon" data-name="p-1.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" alt="" draggable="false">
+            <h3>Ivysaur</h3>
+            <div class="type">
+                <p style="color:white;background-color:green;">Grass</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-1.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" alt="" draggable="false">
+            <h3>Venusaur</h3>
+            <div class="type">
+                <p style="color:white;background-color:green;">Grass</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt= "" draggable="false">
+            <h3>Charmander</h3>
+             <div class="type">
+                <p style="color:white;background-color:#cc5500;">Fire</p>
+            </div>
+        </div>
+<!-- 
+        <div class="pokemon" data-name="p-2.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png" alt="" draggable="false">
+            <h3>Charmelon</h3>
+             <div class="type">
+                <p style="color:white;background-color:#cc5500;">Fire</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-2.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" alt="" draggable="false">
+            <h3>Charizard</h3>
+             <div class="type">
+                <p style="color:white;background-color:#cc5500;">Fire</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-3">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="" draggable="false">
+            <h3>Squirtle</h3>
+            <div class="type">
+                <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-3.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png" alt="" draggable="false">
+            <h3>Wartortle</h3>
+            <div class="type">
+                <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-3.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png" alt="" draggable="false">
+            <h3>Blastoise</h3>
+            <div class="type">
+                <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-4">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" alt="" draggable="false">
+            <h3>Pidgey</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkslategrey;">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-4.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png" alt="" draggable="false">
+            <h3>Pidgeotto</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkslategrey;">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-4.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png" alt="" draggable="false">
+            <h3>Pidgeot</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkslategrey;">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-5">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png" alt="" draggable="false">
+            <h3>Caterpie</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkolivegreen;">Bug</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-5.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png" alt="" draggable="false">
+            <h3>Metapod</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkolivegreen;">Bug</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-5.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png" alt="" draggable="false">
+            <h3>Butterfree</h3>
+            <div class="type">
+                <p style="color:white;background-color:darkolivegreen;">Bug</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-6">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png" alt="" draggable="false">
+            <h3>Geodude</h3>
+            <div class="type">
+                <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-6.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png" alt="" draggable="false">
+            <h3>Graveler</h3>
+            <div class="type">
+                <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-6.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png" alt="" draggable="false">
+            <h3>Golem</h3>
+            <div class="type">
+                <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+                <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-7">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png" alt="" draggable="false">
+            <h3>Magikarp</h3>
+            <div class="type">
+                <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-7.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png" alt="" draggable="false">
+            <h3>Gyarados</h3>
+            <div class="type">
+                <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-8">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png" alt="" draggable="false">
+            <h3>Dratini</h3>
+            <div class="type">
+                <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-8.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png" alt="" draggable="false">
+            <h3>Dragonair</h3>
+            <div class="type">
+                <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-8.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png" alt="" draggable="false">
+            <h3>Dragonite</h3>
+            <div class="type">
+                <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+                <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-9">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png" alt="" draggable="false">
+            <h3>Abra</h3>
+            <div class="type">
+                <p style="color:white;background-color:purple;">Psychic</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-9.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png" alt="" draggable="false">
+            <h3>Kadabra</h3>
+            <div class="type">
+                <p style="color:white;background-color:purple;">Psychic</p>
+            </div>
+        </div>
+
+        <div class="pokemon" data-name="p-9.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png" alt="" draggable="false">
+            <h3>Alakazam</h3>
+            <div class="type">
+                <p style="color:white;background-color:purple;">Psychic</p>
+            </div>
+        </div> -->
+
+        <div class="pokemon" data-name="p-10">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png" alt="" draggable="false">
+            <h3>Gastly</h3>
+            <div class="type">
+                <p style="color:white;background-color:#8878C3;">Ghost</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div>
+
+        <!-- <div class="pokemon" data-name="p-10.1">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png" alt="" draggable="false">
+            <h3>Haunter</h3>
+            <div class="type">
+                <p style="color:white;background-color:#8878C3;">Ghost</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div>
+
+
+        <div class="pokemon" data-name="p-10.2">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png" alt="" draggable="false">
+            <h3>Gengar</h3>
+            <div class="type">
+                <p style="color:white;background-color:#8878C3;">Ghost</p>
+                <p style="color:white;background-color:purple;">Poison</p>
+            </div>
+        </div> -->
+
+
+    </div>
+
+
+
+    
+<div class="pokemon-preview">
+    <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img style="scale: 0.9;" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" draggable="false">
+        <div class="next" next-data="p-1.1">
+            <p>►</p>
+        </div>
+        <h3>Bulbasaur</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:green; margin-bottom: 40px;">Grass</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+            <!-- <p style="color:snow;background-color:darkslategrey; font-size: 1.5rem;">Generation 1</p> -->
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-1.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" alt="" draggable="false">
+        <div class="next" next-data="p-1.2">
+            <p>►</p>
+        </div>
+        <div class="prev" prev-data="p-1">
+            <p>◄</p>
+        </div>
+        <h3>Ivysaur</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:green;">Grass</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+            <!-- <p style="color:snow;background-color:darkslategrey; font-size: 1.5rem;">Generation 1</p> -->
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-1.2">
+        <i class="fas fa-times"></i>
+        <img style="scale: 1.1;" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-1.1">
+            <p>◄</p>
+        </div>
+        <h3>Venasaur</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:green;">Grass</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+            <!-- <p style="color:snow;background-color:darkslategrey; font-size: 1.5rem;">Generation 1</p> -->
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="" draggable="false">
+        <div class="next" next-data="p-2.1">
+            <p>►</p>
+        </div>
+        <h3>Charmander</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:#cc5500;">Fire</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-2.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png" alt="" draggable="false">
+        <div class="next" next-data="p-2.2">
+            <p>►</p>
+        </div>
+        <div class="prev" prev-data="p-2">
+            <p>◄</p>
+        </div>
+        <h3>Charmelon</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:#cc5500;">Fire</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-2.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-2.1">
+            <p>◄</p>
+        </div>
+        <h3>Charizard</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:#cc5500;">Fire</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-3">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="" draggable="false">
+        <div class="next" next-data="p-3.1">
+            <p>►</p>
+        </div>
+        <h3>Squirtle</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-3.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png" alt="" draggable="false">
+        <div class="next" next-data="p-3.2">
+            <p>►</p>
+        </div>
+        <div class="prev" prev-data="p-3">
+            <p>◄</p>
+        </div>
+        <h3>Wartortle</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+        </div>    
+    </div>
+
+
+    <div class="preview" data-target="p-3.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-3.1">
+            <p>◄</p>
+        </div>
+        <h3>Blastoise</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+        </div>    
+    </div>
+
+
+    <div class="preview" data-target="p-4">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" alt="" draggable="false">
+         <div class="next" next-data="p-4.1">
+            <p>►</p>
+        </div>       
+        <h3>Pidgey</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:darkslategrey;">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>       
+    </div>
+
+    <div class="preview" data-target="p-4.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png" alt="" draggable="false">
+         <div class="next" next-data="p-4.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-4">
+            <p>◄</p>
+        </div>
+        <h3>Pidgeotto</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:darkslategrey;">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>       
+    </div>
+
+    <div class="preview" data-target="p-4.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-4.1">
+            <p>◄</p>
+        </div>
+        <h3>Pidgeot</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:darkslategrey;">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>       
+    </div>
+
+
+    <div class="preview" data-target="p-5">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png" alt="" draggable="false">
+        <div class="next" next-data="p-5.1">
+            <p>►</p>
+        </div>       
+        <h3>Caterpie</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:darkolivegreen;">Bug</p>
+        </div>
+        
+    </div>
+
+    <div class="preview" data-target="p-5.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png" alt="" draggable="false">
+        <div class="next" next-data="p-5.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-5">
+            <p>◄</p>
+        </div>
+        <h3>Metapod</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:darkolivegreen;">Bug</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-5.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-5.1">
+            <p>◄</p>
+        </div>
+        <h3>Butterfree</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:darkolivegreen;">Bug</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-6">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png" alt="" draggable="false">
+        <div class="next" next-data="p-6.1">
+            <p>►</p>
+        </div>       
+        <h3>Geodude</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+        </div>   
+    </div>
+
+    <div class="preview" data-target="p-6.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png" alt="" draggable="false">
+        <div class="next" next-data="p-6.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-6">
+            <p>◄</p>
+        </div>
+        <h3>Graveler</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+        </div>   
+    </div>
+
+    <div class="preview" data-target="p-6.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-6.1">
+            <p>◄</p>
+        </div>
+        <h3>Golem</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:rgb(131, 102, 28);">Normal</p>
+            <p style="color:white;background-image: linear-gradient(180deg, rgb(131, 102, 28), rgb(163, 144, 95))">Ground</p>
+        </div>   
+    </div>
+
+    <div class="preview" data-target="p-7">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png" alt="" draggable="false">
+        <div class="next" next-data="p-7.1">
+            <p>►</p>
+        </div>       
+        <h3>Magikarp</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-7.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-7">
+            <p>◄</p>
+        </div>
+        <h3>Gyarados</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:black;background-color:rgb(102, 122, 205);">Water</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-8">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png" alt="" draggable="false">
+        <div class="next" next-data="p-8.1">
+            <p>►</p>
+        </div>       
+        <h3>Dratini</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+        </div>
+      
+    </div>
+
+    <div class="preview" data-target="p-8.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png" alt="" draggable="false">
+        <div class="next" next-data="p-8.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-8">
+            <p>◄</p>
+        </div>
+        <h3>Dragonair</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+        </div>
+      
+    </div>
+
+    <div class="preview" data-target="p-8.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-8.1">
+            <p>◄</p>
+        </div>
+        <h3>Dragonite</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-image: linear-gradient(180deg, #8B0000, #40E0D0)">dragon</p>
+            <p style="color:white;background-image: linear-gradient(180deg, #444, #008080);">Flying</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-9">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png" alt="" draggable="false">
+        <div class="next" next-data="p-9.1">
+            <p>►</p>
+        </div>       
+        <h3>Abra</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:purple;">Psychic</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-9.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png" alt="" draggable="false">
+        <div class="next" next-data="p-9.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-9">
+            <p>◄</p>
+        </div>
+        <h3>Kadabra</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:purple;">Psychic</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-9.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-9.1">
+            <p>◄</p>
+        </div>
+        <h3>Alakazam</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:purple;">Psychic</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-10">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png" alt="" draggable="false">
+        <div class="next" next-data="p-10.1">
+            <p>►</p>
+        </div>       
+        <h3>Gastly</h3>
+        <p>Gen 1: Evolution 1</p>
+        <div class="type">
+            <p style="color:white;background-color:#8878C3;">Ghost</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-10.1">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png" alt="" draggable="false">
+        <div class="next" next-data="p-10.2">
+            <p>►</p>
+        </div>       
+        <div class="prev" prev-data="p-10">
+            <p>◄</p>
+        </div>
+        <h3>Haunter</h3>
+        <p>Gen 1: Evolution 2</p>
+        <div class="type">
+            <p style="color:white;background-color:#8878C3;">Ghost</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+        </div>
+    </div>
+
+
+    <div class="preview" data-target="p-10.2">
+        <i class="fas fa-times"></i>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png" alt="" draggable="false">
+        <div class="prev" prev-data="p-10.1">
+            <p>◄</p>
+        </div>
+        <h3>Gengar</h3>
+        <p>Gen 1: Evolution 3</p>
+        <div class="type">
+            <p style="color:white;background-color:#8878C3;">Ghost</p>
+            <p style="color:white;background-color:purple;">Poison</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
